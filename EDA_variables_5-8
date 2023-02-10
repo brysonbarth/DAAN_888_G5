@@ -1,0 +1,34 @@
+> library(readxl)
+> DAAN888EDA <- read_excel("C:/Users/turne/DAAN888EDA.xlsx")
+> View(DAAN888EDA)
+> hist(DAAN888EDA$`Dust Allergy`)
+
+> hist(DAAN888EDA$`Occupational Hazards`)
+
+> hist(DAAN888EDA$`Genetic Risk`)
+
+> hist(DAAN888EDA$`Chronic Lung Disease`)
+
+> sum(is.na(DAAN888EDA))
+
+> summary(DAAN888EDA$`Dust Allergy`)
+
+> summary(DAAN888EDA$`Occupational Hazards`)
+
+> summary(DAAN888EDA$`Genetic Risk`)
+ 
+> summary(DAAN888EDA$`Chronic Lung Disease`)
+
+> View(DAAN888EDA)
+> library(tidyverse)
+> cor.test(DAAN888EDA$`Dust Allergy`, DAAN888EDA$`Occupational Hazards`, method = "pearson")
+
+> cor.test(DAAN888EDA$`Dust Allergy`, DAAN888EDA$`Genetic Risk`, method = "pearson")
+
+> cor.test(DAAN888EDA$`Dust Allergy`, DAAN888EDA$`Chronic Lung Disease`, method = "pearson")
+
+> cor.test(DAAN888EDA$`Occupational Hazards`, DAAN888EDA$`Genetic Risk`, method = "pearson")
+
+> cor.test(DAAN888EDA$`Occupational Hazards`, DAAN888EDA$`Chronic Lung Disease`, method = "pearson")
+
+> cor.test(DAAN888EDA$`Genetic Risk`, DAAN888EDA$`Chronic Lung Disease`, method = "pearson")
